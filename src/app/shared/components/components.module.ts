@@ -1,6 +1,6 @@
-import { CardInfoComponent } from './components/card-info/card-info.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CardInfoComponent } from './card-info/card-info.component';
 
 @NgModule({
   declarations: [CardInfoComponent],
