@@ -1,0 +1,66 @@
+// Cores para tipos de Pokémon (mapa global)
+$pokemon-colors: (
+  'normal': #a8a77a,
+  'fire': #ee8130,
+  'water': #6390f0,
+  'electric': #f7d02c,
+  'grass': #7ac74c,
+  'ice': #96d9d6,
+  'fighting': #c22e28,
+  'poison': #a33ea1,
+  'ground': #e2bf65,
+  'flying': #a98ff3,
+  'psychic': #f95587,
+  'bug': #a6b91a,
+  'rock': #b6a136,
+  'ghost': #735797,
+  'dragon': #6f35fc,
+  'fairy': #d685ad,
+);
+
+ // Cores para estatísticas de Pokémon
+ $pokemon-stats-colors: (
+  'HP': #df2140,
+  'ATK': #ff994d,
+  'DEF': #eecd3d,
+  'SpA': #85ddff,
+  'SpD': #96da83,
+  'SPD': #fb94a8
+);
+
+// Temas
+@mixin light-theme-root {
+  // Backgrounds
+  --bg-primary: #f6f8fc;
+  --bg-secondary: #ffffff;
+  --bg-search: #ffffff;
+  --bg-btn: #f0f1e5;
+  --bg-btn-search: #ff5350;
+
+  // Textos e ícones
+  --color-text: #363131;
+  --color-placeholder: #c9b3b3;
+  --color-arrow: #1e1e1e;
+
+  // Cores para Cartões e Componentes
+  --color-card-info: #f6f8fc;
+
+  // Sombras
+  --shadow-default: 4px 4px 21.5px 6px rgba(0, 0, 0, 0.25);
+  --shadow-search: 0px 4px 18.5px 2px rgba(0, 0, 0, 0.25);
+  --shadow-card-page: 0px 21px 25.9px -14px rgba(0, 0, 0, 0.1);
+
+}
+
+@mixin theme-dark {
+  // Backgrounds
+  --bg-primary: #dd092f;
+  --bg-secondary: #77b35b;
+
+  // Textos e ícones
+  --color-text: #ffffff;
+  --color-arrow: #f3f3f3;
+
+  // Cores para Cartões e Componentes
+  --color-card-info: #bfc66b;
+}
