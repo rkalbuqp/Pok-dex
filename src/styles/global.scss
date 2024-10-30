@@ -1,9 +1,9 @@
 // Importações locais de estilo
-@import "./reset";
-@import "./themes";
+@import './reset';
+@import './themes';
 
 // Importação de fontes externas
-@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 // Definições globais de tema
 :root {
@@ -23,10 +23,10 @@ html {
 // Estilos principais do corpo da página
 body {
   background-color: var(--bg-primary);
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
 
   // Configurações específicas para botões
   button {
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 }
