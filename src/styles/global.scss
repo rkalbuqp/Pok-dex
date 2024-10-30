@@ -1,0 +1,32 @@
+// Importações locais de estilo
+@import "./reset";
+@import "./themes";
+
+// Importação de fontes externas
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// Definições globais de tema
+:root {
+  @include theme-light-root();
+}
+
+// Definição de tema escuro
+.theme-dark {
+  @include theme-dark();
+}
+
+// Configurações gerais
+html {
+  font-size: 14px;
+}
+
+// Estilos principais do corpo da página
+body {
+  background-color: var(--bg-primary);
+  font-family: "Kumbh Sans", sans-serif;
+
+  // Configurações específicas para botões
+  button {
+    font-family: "Inter", sans-serif;
+  }
+}
