@@ -9,7 +9,7 @@ export class CardInfoComponent {
   @Input() namePokemon: string = 'Não definido';
   @Input() description: string = 'Não definido';
   @Input() listOfPokemonTypes: string[] = ['Não definido'];
-  @Input() posNumber: Number = 0;
+  @Input() posNumber: number = 0;
   @Input() imageURL: string = '';
 
   formattedPosNumber() {
