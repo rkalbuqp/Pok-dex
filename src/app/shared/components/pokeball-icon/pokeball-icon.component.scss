@@ -17,6 +17,7 @@ main {
       width: 100%;
       height: auto;
       filter: brightness(0.9);
+      z-index: 1;
     }
   }
 
@@ -33,9 +34,10 @@ main {
   }
 
   .pokeball3 {
-    top: -130px;
-    left: 1186px;
-    z-index: -4;
+    width: 312px;
+    top: -150px;
+    left: 1127px;
+    z-index: -1;
   }
 
   @media (max-width: $bp-mobile) {
@@ -52,9 +54,9 @@ main {
       left: 180px;
     }
     .pokeball3 {
-      width: 142px;
-      height: 143px;
-      top: -50px;
+      width: 102px;
+      height: 103px;
+      top: -30px;
       left: 291px;
     }
   }
