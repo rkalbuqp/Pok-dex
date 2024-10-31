@@ -1,21 +1,19 @@
-@import '../../../../styles/breackpoints';
-
 main {
-  position: relative; // Permite posicionamento absoluto para as pokebolas
-  margin-top: 2rem; // Espaçamento acima das pokebolas
+  position: relative;
+  margin-top: 2rem;
 
   .pokeball1,
   .pokeball2,
   .pokeball3 {
-    position: absolute; // Permite posicionamento absoluto
-    width: 410px; // Largura da pokebola
-    height: 400px; // Altura da pokebola
-    gap: 0px; // Espaço entre os elementos (não será visível aqui)
+    position: absolute;
+    width: 410px;
+    height: 400px;
+    gap: 0px;
     opacity: 1;
 
     img {
-      width: 100%; // Faz com que a imagem da pokebola ocupe 100% do contêiner
-      height: auto; // Mantém a proporção da imagem
+      width: 100%;
+      height: auto;
     }
   }
 
