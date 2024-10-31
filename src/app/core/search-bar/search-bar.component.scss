@@ -3,7 +3,7 @@
 
 .search-bar {
   position: relative;
-  width: 1007px;
+  width: 1007px; // Largura padrão
   height: 73px;
   top: 40px;
   left: 270px;
@@ -12,6 +12,14 @@
   gap: 0;
   opacity: 1;
   margin-bottom: 100px;
+
+  // Adicionando responsividade
+  @media (max-width: $bp-mobile) {
+    width: 90%; // Ajusta a largura para 90% em telas pequenas
+    left: 5%; // Centraliza a barra na tela
+    top: 20px; // Ajusta a posição do topo
+    margin-bottom: 50px; // Reduz a margem inferior
+  }
 }
 
 .search-bar input {
@@ -23,6 +31,10 @@
   margin-right: 1rem;
   padding: 1rem;
   color: #c9b3b3;
+
+  @media (max-width: $bp-mobile) {
+    padding: 0.8rem; // Reduz o padding em telas pequenas
+  }
 }
 
 .btn {
@@ -37,11 +49,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: $bp-mobile) {
+    width: 60px; // Ajusta a largura do botão
+  }
 }
 
 .btn img {
   width: 20px;
   height: 20px;
+
+  @media (max-width: $bp-mobile) {
+    width: 18px; // Reduz o tamanho da imagem
+    height: 18px;
+  }
 }
 
 .btn:hover img {
