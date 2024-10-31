@@ -1,0 +1,60 @@
+@import '../../../../styles/breackpoints';
+
+main {
+  position: relative; // Permite posicionamento absoluto para as pokebolas
+  margin-top: 2rem; // Espaçamento acima das pokebolas
+
+  .pokeball1,
+  .pokeball2,
+  .pokeball3 {
+    position: absolute; // Permite posicionamento absoluto
+    width: 410px; // Largura da pokebola
+    height: 400px; // Altura da pokebola
+    gap: 0px; // Espaço entre os elementos (não será visível aqui)
+    opacity: 1;
+
+    img {
+      width: 100%; // Faz com que a imagem da pokebola ocupe 100% do contêiner
+      height: auto; // Mantém a proporção da imagem
+    }
+  }
+
+  .pokeball1 {
+    top: -200px; // Ajuste de posição para a pokebola 1
+    left: -136px; // Ajuste de posição para a pokebola 1
+    z-index: -1;
+  }
+
+  .pokeball2 {
+    top: -400px; // Ajuste de posição para a pokebola 2
+    left: 790px; // Ajuste de posição para a pokebola 2
+    z-index: -1;
+  }
+
+  .pokeball3 {
+    top: 140px; // Ajuste de posição para a pokebola 3
+    left: 1186px; // Ajuste de posição para a pokebola 3
+    z-index: -1;
+  }
+
+  @media (max-width: $bp-mobile) {
+    .pokeball1 {
+      width: 172px;
+      height: 173px;
+      top: -160px;
+      left: -82px;
+    }
+    .pokeball2 {
+      width: 172px;
+      height: 173px;
+      top: -210px;
+      left: 139px;
+    }
+    .pokeball3 {
+      width: 172px;
+      height: 173px;
+      top: 471px;
+      left: 291px;
+    }
+  }
+}
