@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './header/header.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent],
+  declarations: [LayoutComponent, HeaderComponent, SearchBarComponent],
   imports: [CommonModule, RouterModule],
 })
 export class CoreModule {}
