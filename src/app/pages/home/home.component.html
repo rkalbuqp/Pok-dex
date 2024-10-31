@@ -1,6 +1,14 @@
-<app-pokeball-icon></app-pokeball-icon>
+<div class="pokeball-icon">
+  <app-pokeball-icon></app-pokeball-icon>
+</div>
 
-<app-card-info
-  namePokemon="Bulbasaur"
-  description="A strange seed was planted on its back at birth. the plant sprouts and grows with this pokémon."
-  [listOfPokemonTypes]="['grass', 'poison']"></app-card-info>
+<div class="pokemon-cards">
+  <app-card-info
+    *ngFor="let pokemon of pokemonList"
+    [namePokemon]="pokemon.name"
+    [description]="pokemon.description"
+    [listOfPokemonTypes]="pokemon.types"
+    [posNumber]="pokemon.id"
+    [imageURL]="pokemon.imageUrl">
+  </app-card-info>
+</div>
