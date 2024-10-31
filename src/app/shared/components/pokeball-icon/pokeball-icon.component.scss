@@ -20,21 +20,21 @@ main {
   }
 
   .pokeball1 {
-    top: -410px; // Ajuste de posição para a pokebola 1
-    left: -136px; // Ajuste de posição para a pokebola 1
+    top: -510px;
+    left: -136px;
     z-index: -1;
   }
 
   .pokeball2 {
-    top: -530px; // Ajuste de posição para a pokebola 2
-    left: 790px; // Ajuste de posição para a pokebola 2
+    top: -690px;
+    left: 790px;
     z-index: -1;
   }
 
   .pokeball3 {
-    top: 20px; // Ajuste de posição para a pokebola 3
-    left: 1186px; // Ajuste de posição para a pokebola 3
-    z-index: -1;
+    top: -130px;
+    left: 1186px;
+    z-index: -4;
   }
 
   @media (max-width: $bp-mobile) {

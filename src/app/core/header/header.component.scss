@@ -15,3 +15,21 @@
     }
   }
 }
+
+.bigger-logo {
+  position: relative; // Mantém a imagem na posição correta
+
+  .bigger-img {
+    position: relative; // Permite o posicionamento da imagem
+    margin-left: 500px; // Ajuste para a posição desejada
+  }
+
+  @media (max-width: $bp-mobile) {
+    margin-left: 50px; // Ajuste para mobile
+    .bigger-img {
+      margin-left: 200px; // Ajuste para mobile
+      width: 172px; // Ajuste de tamanho se necessário
+      height: auto; // Mantém a proporção
+    }
+  }
+}
