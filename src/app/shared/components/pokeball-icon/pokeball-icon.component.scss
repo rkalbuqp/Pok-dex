@@ -16,6 +16,7 @@ main {
     img {
       width: 100%;
       height: auto;
+      filter: brightness(0.9); // Escurece a imagem
     }
   }
 
@@ -26,13 +27,13 @@ main {
   }
 
   .pokeball2 {
-    top: -690px;
+    top: -710px;
     left: 790px;
     z-index: -1;
   }
 
   .pokeball3 {
-    top: -130px;
+    top: -200px;
     left: 1186px;
     z-index: -4;
   }
