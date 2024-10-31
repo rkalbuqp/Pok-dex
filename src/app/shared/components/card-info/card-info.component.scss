@@ -1,3 +1,13 @@
+// Função para obter a cor do tipo
+@function get-pokemon-color($type) {
+  @if map-has-key($pokemon-colors, $type) {
+    @return map-get($pokemon-colors, $type);
+  } @else {
+    @warn "Tipo `#{$type}` não encontrado no mapa de cores.";
+    @return #777; // Cor padrão caso o tipo não exista
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
