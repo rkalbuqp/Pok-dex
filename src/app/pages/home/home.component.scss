@@ -1,0 +1,27 @@
+@import '../../../styles/mixins';
+@import '../../../styles/breackpoints';
+
+.pokemon-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+
+  .card {
+    flex: 1 1 calc(33.33% - 16px); // 3 cards por linha, com espaçamento de 16px
+    max-width: 27.5rem;
+    margin: 1rem;
+  }
+
+  @media (max-width: $bp-limit) {
+    .card {
+      flex: 1 1 calc(33.33% - 16px); // Mantém 3 colunas no breakpoint $bp-limit
+    }
+  }
+
+  @media (max-width: $bp-mobile) {
+    .card {
+      flex: 1 1 100%; // 1 card por linha no breakpoint $bp-mobile
+    }
+  }
+}
