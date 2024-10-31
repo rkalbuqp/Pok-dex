@@ -9,10 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CardInfoComponent implements OnInit {
   @Input() namePokemon: string = 'Undefined';
-  @Input() description: string = 'Undefined';
+  @Input() description: string = '';
   @Input() listOfPokemonTypes: string[] = ['Undefined'];
   @Input() posNumber: number = 0;
-  @Input() imageURL: string = ''; // Adicionando `imageURL` como um @Input()
+  @Input() imageURL: string = '';
 
   pokemonData: any;
 
@@ -23,9 +23,30 @@ export class CardInfoComponent implements OnInit {
   }
 
   fetchPokemonData() {
-    this.http.get(`https://pokeapi.co/api/v2/pokemon/${this.namePokemon.toLowerCase()}`).subscribe((data) => {
+    this.http.get(`https://pokeapi.co/api/v2/pokemon/${this.namePokemon.toLowerCase()}`).subscribe((data: any) => {
       this.pokemonData = data;
       this.imageURL = this.pokemonData?.sprites?.other['official-artwork'].front_default;
+
+      // Agora fazemos a requisição para a espécie do Pokémon para obter a descrição
+      this.fetchPokemonSpecies(this.pokemonData.species.url);
+    });
+  }
+
+  fetchPokemonSpecies(speciesUrl: string) {
+    this.http.get(speciesUrl).subscribe((speciesData: any) => {
+      const flavorTextEntries = speciesData.flavor_text_entries;
+      const englishDescription = flavorTextEntries.find((entry: { language: { name: string } }) => entry.language.name === 'en');
+
+      if (englishDescription) {
+        // Limpeza da descrição
+        this.description = englishDescription.flavor_text
+          .replace(/[\n\r\f]+/g, ' ') // Remove quebras de linha e caracteres de quebra de página
+          .replace(/”/g, '"') // Substitui aspas
+          .replace(/“/g, '"') // Substitui aspas
+          .trim(); // Remove espaços extras no início e no final
+      } else {
+        this.description = 'Description not available';
+      }
     });
   }
 
