@@ -6,9 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card-info.component.scss'],
 })
 export class CardInfoComponent {
-  @Input() namePokemon: string = 'Não definido';
-  @Input() description: string = 'Não definido';
-  @Input() listOfPokemonTypes: string[] = ['Não definido'];
+  @Input() namePokemon: string = 'Undedfined';
+  @Input() description: string = 'Undedfined';
+  @Input() listOfPokemonTypes: string[] = ['Undedfined'];
   @Input() posNumber: number = 0;
   @Input() imageURL: string = '';
 
