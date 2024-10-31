@@ -10,9 +10,12 @@
   <div class="container">
     <div class="content">
       <h2>{{ namePokemon }}</h2>
-      <p>{{ description }}</p>
+      <p>
+        {{ description }}
+        <!-- Exibindo a descrição aqui -->
+      </p>
       <button>Know More</button>
     </div>
-    <img class="img" [src]="pokemonData?.sprites?.other['official-artwork'].front_default" alt="Imagem do Pokémon." />
+    <img class="img" [src]="imageURL" alt="Imagem do Pokémon." />
   </div>
 </article>
