@@ -14,8 +14,16 @@
   box-shadow: var(--shadow-card-page);
   transition: box-shadow 0.2s ease-in-out;
 
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
   &:hover {
     box-shadow: var(--shadow-search);
+    transform: scale(1.05); /* Aumenta levemente o cartão */
+    box-shadow:
+      var(--shadow-search),
+      0px 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
   }
 
   .container {

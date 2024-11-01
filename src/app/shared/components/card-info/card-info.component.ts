@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router'; // Importar Router
 
 @Component({
   selector: 'app-card-info',
@@ -16,7 +17,10 @@ export class CardInfoComponent implements OnInit {
 
   pokemonData: any;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+  ) {} // Injetar Router
 
   ngOnInit(): void {
     this.fetchPokemonData();
@@ -52,5 +56,9 @@ export class CardInfoComponent implements OnInit {
 
   formattedPosNumber() {
     return `#${this.posNumber.toString().padStart(3, '0')}`;
+  }
+
+  navigateToDetails() {
+    this.router.navigate(['/details']); // Navega para a página de detalhes
   }
 }
