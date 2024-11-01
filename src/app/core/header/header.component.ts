@@ -11,10 +11,17 @@ export class HeaderComponent {
   isDarkTheme: boolean = false; // Estado para controlar o tema
 
   constructor(private themeService: ThemeService) {
+    // Verifica o armazenamento local para definir o tema inicial
+    const storedTheme = localStorage.getItem('isLightTheme');
+
+    // Se houver um valor no localStorage, usa-o; caso contrário, define como false (light mode)
+    this.isDarkTheme = storedTheme === 'true' ? true : false;
+    this.updateBodyClass(this.isDarkTheme);
+
     // Subscrição para receber alterações no tema
-    this.themeService.theme$.subscribe((dark) => {
-      this.isDarkTheme = dark;
-      this.updateBodyClass(dark);
+    this.themeService.theme$.subscribe((light) => {
+      this.isDarkTheme = light;
+      this.updateBodyClass(light);
     });
   }
 
@@ -27,6 +34,8 @@ export class HeaderComponent {
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme; // Alterna o estado do tema
     this.themeService.themeDark = this.isDarkTheme; // Atualiza o serviço de tema
+    localStorage.setItem('isDarkTheme', String(this.isDarkTheme)); // Armazena a preferência no localStorage
+    this.updateBodyClass(this.isDarkTheme); // Atualiza a classe do corpo
   }
 
   // Método para atualizar a classe do corpo com base no tema
@@ -48,7 +57,7 @@ export class HeaderComponent {
 
     // Verifica se o clique foi fora do botão e do conteúdo do dropdown
     if (dropdownButton && !dropdownButton.contains(target) && dropdownContent && !dropdownContent.contains(target)) {
-      this.isDropdownOpen = false; // Fecha o dropdown
+      this.isDropdownOpen = false;
     }
   }
 }
