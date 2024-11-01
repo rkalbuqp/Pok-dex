@@ -7,15 +7,13 @@
     </div>
     <span class="number">{{ formattedPosNumber() }}</span>
   </div>
+
   <div class="container">
     <div class="content">
-      <h2>{{ namePokemon }}</h2>
-      <p>
-        {{ description }}
-        <!-- Exibindo a descrição aqui -->
-      </p>
-      <button onclick="window.location.href='app-details'">Know More</button>
+      <h2>{{ namePokemon | titlecase }}</h2>
+      <p>{{ description }}</p>
+      <button (click)="navigateToDetails()">Know More</button>
     </div>
-    <img class="img" [src]="imageURL" alt="Imagem do Pokémon." />
+    <img class="img" [src]="imageURL" alt="Imagem do Pokémon" />
   </div>
 </article>

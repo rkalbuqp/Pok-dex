@@ -4,10 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
