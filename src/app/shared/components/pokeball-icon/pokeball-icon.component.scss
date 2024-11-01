@@ -3,41 +3,38 @@
 main {
   position: relative;
   margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); // Três colunas iguais
 
   .pokeball1,
   .pokeball2,
   .pokeball3 {
-    position: absolute; // Mantém o posicionamento absoluto
-    width: 410px; // Tamanho original
-    height: 400px; // Tamanho original
+    position: absolute;
+    width: 410px;
+    height: 400px;
+    gap: 0px;
     opacity: 1;
-    filter: brightness(0);
-    filter: contrast(0.2);
-    filter: opacity(0.2);
 
     img {
       width: 100%;
       height: auto;
+      filter: brightness(0.9);
     }
   }
 
   .pokeball1 {
-    top: -510px; // Altura original
-    left: -136px; // Posição original
+    top: -510px;
+    left: -136px;
     z-index: -1;
   }
 
   .pokeball2 {
-    top: -690px; // Altura original
-    left: 790px; // Posição original
+    top: -690px;
+    left: 790px;
     z-index: -1;
   }
 
   .pokeball3 {
-    top: -130px; // Altura original
-    left: 1300px; // Posição original
+    top: -130px;
+    left: 1300px;
     z-index: -4;
   }
 
@@ -46,12 +43,10 @@ main {
     .pokeball1,
     .pokeball2,
     .pokeball3 {
-      width: 250px; // Ajustando tamanho para tablet
-      height: 240px; // Ajustando altura para tablet
+      width: 250px;
+      height: 240px;
       opacity: 0.8;
-      filter: brightness(0);
-      filter: contrast(0.2);
-      filter: opacity(0.2);
+      filter: brightness(0.9);
     }
 
     .pokeball1 {
@@ -74,19 +69,19 @@ main {
     .pokeball1,
     .pokeball2,
     .pokeball3 {
-      width: 140px; // Tamanho reduzido para mobile
-      height: 130px; // Altura reduzida para mobile
+      width: 140px;
+      height: 130px;
       opacity: 0.7;
     }
 
     .pokeball1 {
-      top: -330px;
+      top: -350px;
       left: -30px;
     }
 
     .pokeball2 {
-      top: -390px;
-      left: 190px;
+      top: -410px;
+      left: 180px;
     }
 
     .pokeball3 {

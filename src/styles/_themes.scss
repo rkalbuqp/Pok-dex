@@ -44,11 +44,19 @@
 }
 
 @mixin theme-dark {
+  // Variáveis de cor para o tema escuro
   --bg-primary: #dd092f;
   --bg-secondary: #77b35b;
-
   --color-text: #ffffff;
   --color-card-info: #bfc66b;
-
   --color-arrow: #f3f3f3;
+
+  // Estilos específicos para cada pokeball
+  .pokeball1,
+  .pokeball2,
+  .pokeball3 {
+    filter: brightness(0);
+    filter: contrast(0.2);
+    filter: opacity(0.2);
+  }
 }
