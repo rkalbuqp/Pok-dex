@@ -6,9 +6,10 @@
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+  padding: 0 1rem; // Adiciona padding para evitar rolagem lateral em telas menores
 
   .card {
-    flex: 1 1 calc(33.33% - 16px); // 3 cards por linha, com espaçamento de 16px
+    flex: 1 1 calc(33.33% - 16px); // 3 cards por linha com espaçamento de 16px
     max-width: 27.5rem;
     margin: 1rem;
   }
@@ -19,9 +20,18 @@
     }
   }
 
+  @media (max-width: $bp-tablet) {
+    .card {
+      flex: 1 1 calc(50% - 16px); // Ajusta para 2 colunas no breakpoint $bp-tablet
+    }
+  }
+
   @media (max-width: $bp-mobile) {
+    padding: 0; // Remove padding para telas realmente pequenas
     .card {
       flex: 1 1 100%; // 1 card por linha no breakpoint $bp-mobile
+      max-width: 100%; // Garante que o card se ajuste ao tamanho total da tela
+      margin: 0.5rem 0; // Ajusta a margem vertical para manter espaçamento
     }
   }
 }
