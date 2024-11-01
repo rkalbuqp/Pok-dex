@@ -1,3 +1,8 @@
 @mixin applyGridColumns($columns) {
-  grid-template-columns: repeat($columns, 1fr);
+  @if $columns > 0 {
+    grid-template-columns: repeat($columns, 1fr);
+    gap: 20px; // Espaço entre os itens da grid
+  } @else {
+    @warn "Número de colunas deve ser positivo.";
+  }
 }

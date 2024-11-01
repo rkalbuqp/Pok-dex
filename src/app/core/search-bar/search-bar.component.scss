@@ -3,22 +3,21 @@
 
 .search-bar {
   position: relative;
-  width: 1217px;
+  width: 100%; // Torna a largura flexível para se ajustar ao contêiner
+  max-width: 1217px; // Limita a largura máxima em telas grandes
   height: 90px;
-  top: 40px;
-  left: 190px;
+  margin: 40px auto 100px; // Centraliza horizontalmente e define espaçamento no topo e inferior
   border-radius: 10px;
   display: flex;
   gap: 0;
   opacity: 1;
-  margin-bottom: 100px;
 
-  // Adicionando responsividade
+  // Responsividade para dispositivos móveis
   @media (max-width: $bp-mobile) {
-    width: 90%; // Ajusta a largura para 90% em telas pequenas
-    left: 5%; // Centraliza a barra na tela
-    top: 20px; // Ajusta a posição do topo
-    margin-bottom: 50px; // Reduz a margem inferior
+    width: 80%; // Ajusta a largura para 90% da tela
+    height: 69px;
+    max-width: none; // Remove qualquer largura máxima em telas pequenas
+    margin: 20px auto 50px; // Reduz o espaçamento
   }
 }
 
@@ -28,7 +27,6 @@
   border-radius: 10px;
   border: 0.001px solid #fffcfc;
   box-shadow: 0px 4px 18.5px 2px #00000040;
-  margin-right: 1rem;
   padding: 1rem;
   color: #c9b3b3;
 
@@ -40,8 +38,6 @@
 .btn {
   width: 81px;
   height: 73px;
-  top: 0;
-  left: 0;
   border-radius: 10px;
   background-color: var(--bg-btn-search);
   border: none;
@@ -52,7 +48,7 @@
 
   @media (max-width: $bp-mobile) {
     width: 50px; // Ajusta a largura do botão
-    height: 59px;
+    height: 55px;
   }
 }
 

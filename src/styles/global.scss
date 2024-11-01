@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 @import './reset';
 @import './themes';
 @import './breackpoints';
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-
 :root {
+  --font-family-base: 'Kumbh Sans', sans-serif;
   @include theme-light-root();
 }
 
@@ -18,8 +18,9 @@ html {
 
 body {
   background-color: var(--bg-primary);
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: var(--font-family-base);
   min-height: 100vh;
+  overflow-x: hidden;
 
   button {
     font-family: 'Inter', sans-serif;
