@@ -13,11 +13,13 @@ main {
     width: 410px; // Tamanho original
     height: 400px; // Tamanho original
     opacity: 1;
+    filter: brightness(0);
+    filter: contrast(0.2);
+    filter: opacity(0.2);
 
     img {
       width: 100%;
       height: auto;
-      filter: brightness(0.9);
     }
   }
 
@@ -48,7 +50,8 @@ main {
       height: 240px; // Ajustando altura para tablet
       opacity: 0.8;
       filter: brightness(0);
-      filter: contrast(0.5);
+      filter: contrast(0.2);
+      filter: opacity(0.2);
     }
 
     .pokeball1 {
