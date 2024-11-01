@@ -2,6 +2,29 @@
   <a href="/home">
     <img class="img" src="assets/logo-pokedex.svg" alt="Logo Pokédex" />
   </a>
+
+  <nav class="dropdown">
+    <button
+      class="dropbtn"
+      id="dropdownBtn"
+      (click)="toggleDropdown()"
+      [attr.aria-haspopup]="true"
+      [attr.aria-expanded]="isDropdownOpen ? 'true' : 'false'">
+      <img src="../../../assets/menu.svg" alt="Menu" />
+    </button>
+    <div class="dropdown-content" [ngClass]="{ show: isDropdownOpen }" id="dropdownContent" role="menu">
+      <p class="options-title">Options</p>
+      <div class="toggle-section" role="menuitem">
+        <div class="toggle-container">
+          <p class="pokemon-title-theme">Pokemon Theme</p>
+          <label class="switch" for="toggleSwitch">
+            <input type="checkbox" id="toggleSwitch" [checked]="isDarkTheme" (change)="toggleTheme()" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <main class="bigger-logo">
