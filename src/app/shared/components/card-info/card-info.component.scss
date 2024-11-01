@@ -1,4 +1,3 @@
-@import '../../../../styles/mixins';
 @import '../../../../styles/breackpoints';
 
 .card {
@@ -84,8 +83,7 @@
   }
 
   @media (max-width: $bp-tablet) {
-    width: 22rem;
-    height: 15.5rem;
+    width: 25rem;
 
     .container {
       .info_type {

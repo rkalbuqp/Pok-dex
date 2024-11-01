@@ -4,29 +4,21 @@
 .container {
   max-width: $bp-limit;
   margin: auto;
-  padding: 0 16px; // Evita que o conteúdo grude nas bordas
 
   &.grid {
     display: grid;
-    gap: 20px; // Espaçamento entre os cards
     align-items: center;
     justify-items: center;
 
-    // Grid para telas maiores
     @include applyGridColumns(3);
 
-    // Ajuste para telas médias
     @media (max-width: $bp-limit) {
       @include applyGridColumns(2);
-      justify-content: center;
-      width: 100%;
+      width: fit-content;
     }
 
-    // Ajuste para telas móveis
     @media (max-width: $bp-mobile) {
       @include applyGridColumns(1);
-      width: 100%;
-      padding: 0; // Remove qualquer padding adicional em telas pequenas
     }
   }
 }
