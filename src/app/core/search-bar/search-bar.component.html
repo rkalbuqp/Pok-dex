@@ -1,6 +1,15 @@
 <div class="search-bar">
-  <input type="text" placeholder="Search eg, ditto or pikachu..." aria-label="Buscar Pokémon" [(ngModel)]="searchQuery" />
-  <button type="submit" class="btn" (click)="searchPokemon()">
+  <input type="text" placeholder="Search eg, ditto or pikachu..." aria-label="Buscar Pokémon" (input)="search($event)" />
+  <button type="submit" class="btn" (click)="search($event)">
     <img src="../../../assets/search-icon.svg" alt="Ícone de busca" />
   </button>
 </div>
+
+<app-card-info
+  *ngIf="!isLoading && !errorMessage && namePokemon !== 'Undefined'"
+  [namePokemon]="namePokemon"
+  [description]="description"
+  [listOfPokemonTypes]="listOfPokemonTypes"
+  [posNumber]="posNumber"
+  [imageURL]="imageURL">
+</app-card-info>
